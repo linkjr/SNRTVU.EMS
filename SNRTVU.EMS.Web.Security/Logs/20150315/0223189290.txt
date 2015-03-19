@@ -1,0 +1,4 @@
+2015-03-15 02:23:18
+异常消息：未将对象引用设置到对象的实例。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.ManageController.ModifyContact
+异常类型：System.NullReferenceException

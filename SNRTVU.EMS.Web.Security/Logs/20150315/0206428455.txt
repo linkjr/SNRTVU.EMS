@@ -1,0 +1,4 @@
+2015-03-15 02:06:42
+异常消息：不存在具有键“Province”的“IEnumerable<SelectListItem>”类型的 ViewData 项。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.ManageController.GetSelectData
+异常类型：System.InvalidOperationException

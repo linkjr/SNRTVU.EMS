@@ -39,10 +39,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SNRTVU.EMS.Domain\SNRTVU.EMS.Domain.csproj">
+      <Project>{3e4578f1-c9dd-48c8-aaaf-ac47a6293d04}</Project>
+      <Name>SNRTVU.EMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.IApplication\SNRTVU.EMS.IApplication.csproj">
+      <Project>{2bd3d95c-3aef-426b-8d48-90d8ff36245a}</Project>
+      <Name>SNRTVU.EMS.IApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.Infrastructure\SNRTVU.EMS.Infrastructure.csproj">
+      <Project>{23aa5d85-1769-4f1f-bb38-2ed20c3f56ce}</Project>
+      <Name>SNRTVU.EMS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.TransferObjects\SNRTVU.EMS.TransferObjects.csproj">
+      <Project>{0b46c781-70c0-412a-b2c4-ad42dcc2cdfa}</Project>
+      <Name>SNRTVU.EMS.TransferObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xCopy /r /y "$(TargetDir)*.dll" "$(SolutionDir)SNRTVU.EMS.Web.Security\bin\"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

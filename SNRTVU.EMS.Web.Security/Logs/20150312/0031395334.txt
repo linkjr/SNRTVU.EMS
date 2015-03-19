@@ -1,0 +1,4 @@
+2015-03-12 00:31:39
+异常消息：实体类型 AccountLog 不是当前上下文的模型的一部分。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.AccountController.GetEntitySetAndBaseTypeForType
+异常类型：System.InvalidOperationException

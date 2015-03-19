@@ -1,0 +1,4 @@
+2015-03-15 02:14:05
+异常消息：传入字典的模型项的类型为“SNRTVU.EMS.TransferObjects.AccountTransferObject”，但此字典需要类型“SNRTVU.EMS.TransferObjects.ContactTransferObject”的模型项。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.ManageController.SetModel
+异常类型：System.InvalidOperationException

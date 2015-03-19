@@ -30,14 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,21 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="EntityFramework\EMSDbContext.cs" />
-    <Compile Include="EntityFramework\EntityTypeConfigurations\UserEntityTypeConfiguration.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkRepository.cs" />
+    <Compile Include="EntityFramework\EntityFrameworkRepositoryContext.cs" />
+    <Compile Include="EntityFramework\IEntityFrameworkRepositoryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SNRTVU.EMS.Domain\SNRTVU.EMS.Domain.csproj">
       <Project>{3e4578f1-c9dd-48c8-aaaf-ac47a6293d04}</Project>
       <Name>SNRTVU.EMS.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.Infrastructure\SNRTVU.EMS.Infrastructure.csproj">
+      <Project>{23aa5d85-1769-4f1f-bb38-2ed20c3f56ce}</Project>
+      <Name>SNRTVU.EMS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,4 @@
+2015-03-15 02:00:15
+异常消息：到值类型“System.Boolean”的强制转换失败，因为具体化值为 null。结果类型的泛型参数或查询必须使用可以为 null 的类型。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.ManageController.GetValue
+异常类型：System.InvalidOperationException

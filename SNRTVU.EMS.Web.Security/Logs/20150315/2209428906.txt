@@ -1,0 +1,5 @@
+2015-03-15 22:09:42
+异常消息：左括号“(”缺少对应的右括号“)”。
+
+异常方法：SNRTVU.EMS.Web.Security.Controllers.HomeController.EnsureGeneratedCode
+异常类型：System.Web.HttpParseException

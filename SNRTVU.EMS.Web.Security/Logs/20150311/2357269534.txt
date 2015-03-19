@@ -1,0 +1,5 @@
+2015-03-11 23:57:26
+异常消息：数据库 'D:\Projects\SNDD\SNDD.Senate\Data\SNDD.Senate.mdf' 已存在。请选择其他数据库名称。
+无法将文件 'D:\Projects\Suining Radio and TV University\Educational Management System\04-编码\SNRTVU.EMS\SNRTVU.EMS.Web.Security\App_Data\SNDD.Senate.mdf' 作为数据库 'SNDD.Senate'. 附加
+异常方法：SNRTVU.EMS.Web.Security.Controllers.AccountController.OnError
+异常类型：System.Data.SqlClient.SqlException

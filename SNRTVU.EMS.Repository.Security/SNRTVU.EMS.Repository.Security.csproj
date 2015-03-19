@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E13B62E9-CC7C-4F67-97A7-06FE7CBBD9DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SNRTVU.EMS.Repository.Security</RootNamespace>
+    <AssemblyName>SNRTVU.EMS.Repository.Security</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFramework\AccountLogRepository.cs" />
+    <Compile Include="EntityFramework\EntityTypeConfigurations\AccountLogEntityTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\EntityTypeConfigurations\UserEntityTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\SecurityDbContext.cs" />
+    <Compile Include="EntityFramework\SecurityRepositoryContext.cs" />
+    <Compile Include="EntityFramework\UserRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SNRTVU.EMS.Domain\SNRTVU.EMS.Domain.csproj">
+      <Project>{3e4578f1-c9dd-48c8-aaaf-ac47a6293d04}</Project>
+      <Name>SNRTVU.EMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.Infrastructure.Repositories\SNRTVU.EMS.Infrastructure.Repositories.csproj">
+      <Project>{8f941244-ba07-4ab1-b118-fcfb22c56e11}</Project>
+      <Name>SNRTVU.EMS.Infrastructure.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SNRTVU.EMS.Infrastructure\SNRTVU.EMS.Infrastructure.csproj">
+      <Project>{23aa5d85-1769-4f1f-bb38-2ed20c3f56ce}</Project>
+      <Name>SNRTVU.EMS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xCopy /r /y "$(TargetDir)*.dll" "$(SolutionDir)SNRTVU.EMS.Web.Security\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

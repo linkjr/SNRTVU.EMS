@@ -1,0 +1,4 @@
+2015-03-12 00:00:08
+异常消息：数据库中已存在名为 'StuUser' 的对象。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.AccountController.OnError
+异常类型：System.Data.SqlClient.SqlException

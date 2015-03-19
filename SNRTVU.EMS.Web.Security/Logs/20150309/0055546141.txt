@@ -1,0 +1,12 @@
+2015-03-09 00:55:54
+异常消息：未找到分部视图“_HeaderPartial”或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Account/_HeaderPartial.aspx
+~/Views/Account/_HeaderPartial.ascx
+~/Views/Shared/_HeaderPartial.aspx
+~/Views/Shared/_HeaderPartial.ascx
+~/Views/Account/_HeaderPartial.cshtml
+~/Views/Account/_HeaderPartial.vbhtml
+~/Views/Shared/_HeaderPartial.cshtml
+~/Views/Shared/_HeaderPartial.vbhtml
+异常方法：SNRTVU.EMS.Web.Security.Controllers.AccountController.FindPartialView
+异常类型：System.InvalidOperationException

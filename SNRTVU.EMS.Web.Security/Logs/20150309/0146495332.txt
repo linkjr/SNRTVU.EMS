@@ -1,0 +1,4 @@
+2015-03-09 01:46:49
+异常消息：c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\d853922e\5a2f77e3\App_Web_modifycontact.cshtml.a8d08dba.9bhpqeaf.0.cs(32): error CS0246: 未能找到类型或命名空间名称“ContactTransferObject”(是否缺少 using 指令或程序集引用?)
+异常方法：SNRTVU.EMS.Web.Security.Controllers.HomeController.Compile
+异常类型：System.Web.HttpCompileException

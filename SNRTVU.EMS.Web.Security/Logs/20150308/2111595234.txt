@@ -1,0 +1,4 @@
+2015-03-08 21:11:59
+异常消息：对象名 'dbo.Users' 无效。
+异常方法：SNRTVU.EMS.Web.Security.Controllers.AccountController.ExecuteStoreCommands
+异常类型：System.Data.SqlClient.SqlException

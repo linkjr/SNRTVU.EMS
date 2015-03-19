@@ -1,0 +1,4 @@
+2015-03-09 00:51:39
+异常消息：d:\Projects\Suining Radio and TV University\Educational Management System\04-编码\SNRTVU.EMS\SNRTVU.EMS.Web.Security\Views\Shared\_Layout.cshtml(6): error CS0103: 当前上下文中不存在名称“Config”
+异常方法：SNRTVU.EMS.Web.Security.Controllers.HomeController.Compile
+异常类型：System.Web.HttpCompileException
