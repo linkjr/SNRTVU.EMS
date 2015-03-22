@@ -47,13 +47,23 @@ namespace SNRTVU.EMS.TransferObjects
         [Display(Name = "详细地址")]
         public string Address { get; set; }
 
-        public bool IsByPost { get; set; }
+        [Display(Name = "邮寄课本")]
+        public bool? IsByPost { get; set; }
 
         /// <summary>
         /// 获取或设置新闻创建日期。
         /// </summary>
         [DataMember]
         public DateTime CreateDate { get; set; }
+
+        [Display(Name = "详细地址")]
+        public string FullAddress
+        {
+            get
+            {
+                return this.Province + this.City + this.District + this.Address;
+            }
+        }
     }
 
     [DataContract]

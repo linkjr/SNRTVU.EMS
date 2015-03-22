@@ -92,7 +92,7 @@ namespace SNRTVU.EMS.Domain.Models
         /// <summary>
         /// 获取或设置是教材否通过邮寄。
         /// </summary>
-        public bool IsByPost { get; private set; }
+        public bool? IsByPost { get; private set; }
 
         /// <summary>
         /// 获取或设置是否禁用。
@@ -180,7 +180,7 @@ namespace SNRTVU.EMS.Domain.Models
         /// <summary>
         /// 修改联系方式。
         /// </summary>
-        public void ModifyContact(string phone, string province, string city, string district, string address, bool isByPost)
+        public void ModifyContact(string phone, string province, string city, string district, string address, bool? isByPost)
         {
             this.Phone = phone;
             this.Province = province;

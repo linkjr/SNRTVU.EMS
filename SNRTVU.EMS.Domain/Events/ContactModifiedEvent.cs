@@ -20,6 +20,6 @@ namespace SNRTVU.EMS.Domain.Events
 
         public string Address { get; set; }
 
-        public bool IsByPost { get; set; }
+        public bool? IsByPost { get; set; }
     }
 }

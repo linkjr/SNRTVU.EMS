@@ -94,7 +94,7 @@ namespace SNRTVU.EMS.Web.Security.Controllers
                 City = ar.City,
                 District = ar.District,
                 Address = ar.Address,
-                IsByPost = ar.IsByPost
+                IsByPost = ar.IsByPost.HasValue ? ar.IsByPost.Value : false
             };
             return View(model);
         }
