@@ -7,32 +7,32 @@
     <div class="form-horizontal jumbotron">
         <div class="form-group">
             @Html.LabelFor(m => m.Name, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
+            <div class="col-sm-10 form-control-static">
                 @Html.DisplayFor(m => m.Name)
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.Identification, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
+            <div class="col-sm-10 form-control-static">
                 @Html.DisplayFor(m => m.Identification)
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.Phone, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
+            <div class="col-sm-10 form-control-static">
                 @Html.DisplayFor(m => m.Phone)
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.FullAddress, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
+            <div class="col-sm-10 form-control-static">
                 @Html.DisplayFor(m => m.FullAddress)
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.IsByPost, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
-                @Html.DisplayFor(m => m.IsByPost)
+            <div class="col-sm-10 form-control-static">
+                @Html.Raw(!Model.IsByPost.HasValue ? string.Format("未设置 <a href='{0}' class='text-danger'>马上设置</a>", Url.Action("modifycontact", "manage")) : (Model.IsByPost.Value ? "是" : "否"))
             </div>
         </div>
     </div>
