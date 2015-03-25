@@ -13,6 +13,7 @@
             {
                 @Html.AntiForgeryToken()
                 <h4>使用本地帐户登录。</h4>
+                <h4>推荐使用<a href="@Url.Content(Config.ChromeDownload)">谷歌</a>、<a href="@Config.FirefoxDownload">火狐</a>或IE9以上浏览器。</h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
