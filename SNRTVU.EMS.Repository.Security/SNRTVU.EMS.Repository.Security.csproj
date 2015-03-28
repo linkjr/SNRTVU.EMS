@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramework\AccountFeeRepository.cs" />
     <Compile Include="EntityFramework\AccountLogRepository.cs" />
+    <Compile Include="EntityFramework\EntityTypeConfigurations\AccountFeeEntityTypeConfiguration.cs" />
     <Compile Include="EntityFramework\EntityTypeConfigurations\AccountLogEntityTypeConfiguration.cs" />
     <Compile Include="EntityFramework\EntityTypeConfigurations\StudentEntityTypeConfiguration.cs" />
     <Compile Include="EntityFramework\EntityTypeConfigurations\UserEntityTypeConfiguration.cs" />

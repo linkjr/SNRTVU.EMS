@@ -281,6 +281,7 @@
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\ModifyProfile.cshtml" />
     <Content Include="Views\Manage\ModifyContact.cshtml" />
+    <Content Include="Views\Home\Fee.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

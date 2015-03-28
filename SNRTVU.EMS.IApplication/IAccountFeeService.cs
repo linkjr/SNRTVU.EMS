@@ -8,8 +8,8 @@ using SNRTVU.EMS.TransferObjects;
 
 namespace SNRTVU.EMS.IApplication
 {
-    public interface IStudentService : IApplicationService
+    public interface IAccountFeeService : IApplicationService
     {
-        IQueryable<StudentTransferObject> FindListByIdentification(string identification);
+        IQueryable<AccountFeeTransferObject> GetList(string studentID);
     }
 }

@@ -1,0 +1,25 @@
+﻿@model IQueryable<AccountFeeTransferObject>
+@{
+    ViewBag.Title = "缴费查询";
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div>暂无缴费记录</div>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>缴费金额(￥)</th>
+            <th>缴费日期</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BillingAmount.ToString("0.00")</td>
+                <td>@item.CreateDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </table>
+}

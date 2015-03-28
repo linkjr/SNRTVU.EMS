@@ -17,12 +17,13 @@ namespace SNRTVU.EMS.Web.Security.Tests.Controllers
     {
         private readonly IUserService userService;
         private readonly IStudentService studentService;
+        private readonly IAccountFeeService accountFeeService;
 
         [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController(userService, studentService);
+            HomeController controller = new HomeController(userService, studentService, accountFeeService);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
