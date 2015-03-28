@@ -14,7 +14,7 @@ namespace SNRTVU.EMS.Application
 {
     public class UserService : ApplicationService, IUserService
     {
-        private IUserRepository repository;
+        private readonly IUserRepository repository;
 
         public UserService(IRepositoryContext context,
             IUserRepository repository)

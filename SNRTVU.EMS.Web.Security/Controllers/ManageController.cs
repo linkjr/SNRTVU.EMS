@@ -12,12 +12,14 @@ namespace SNRTVU.EMS.Web.Security.Controllers
 {
     public class ManageController : AdminController
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
+        private readonly IStudentService _studentService;
 
-        public ManageController(IUserService userService)
-            : base(userService)
+        public ManageController(IUserService userService, IStudentService studentService)
+            : base(userService, studentService)
         {
             this._userService = userService;
+            this._studentService = studentService;
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)

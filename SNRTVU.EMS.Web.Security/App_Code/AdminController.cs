@@ -12,11 +12,13 @@ namespace SNRTVU.EMS.Web.Security
     [Authorize]
     public class AdminController : BaseController
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
+        private readonly IStudentService _studentService;
 
-        public AdminController(IUserService userService)
+        public AdminController(IUserService userService, IStudentService studentService)
         {
             this._userService = userService;
+            this._studentService = studentService;
         }
 
         public AccountTransferObject CurrentUser
@@ -38,6 +40,22 @@ namespace SNRTVU.EMS.Web.Security
             set
             {
                 Session["User"] = value;
+            }
+        }
+
+        public string StuID
+        {
+            get
+            {
+                if (Session["StuID"] == null)
+                {
+                    var studentList = this._studentService.FindListByIdentification(this.CurrentUser.Identification);
+                    if (studentList != null && studentList.Any())
+                    {
+                        return studentList.ToList()[0].StuID;
+                    }
+                }
+                return null;
             }
         }
     }

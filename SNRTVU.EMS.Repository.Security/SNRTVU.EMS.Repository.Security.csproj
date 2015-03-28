@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="EntityFramework\AccountLogRepository.cs" />
     <Compile Include="EntityFramework\EntityTypeConfigurations\AccountLogEntityTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\EntityTypeConfigurations\StudentEntityTypeConfiguration.cs" />
     <Compile Include="EntityFramework\EntityTypeConfigurations\UserEntityTypeConfiguration.cs" />
     <Compile Include="EntityFramework\SecurityDbContext.cs" />
     <Compile Include="EntityFramework\SecurityRepositoryContext.cs" />
+    <Compile Include="EntityFramework\StudentRepository.cs" />
     <Compile Include="EntityFramework\UserRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

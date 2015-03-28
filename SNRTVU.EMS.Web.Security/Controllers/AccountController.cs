@@ -12,12 +12,14 @@ namespace SNRTVU.EMS.Web.Security.Controllers
 {
     public class AccountController : AdminController
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
+        private readonly IStudentService _studentService;
 
-        public AccountController(IUserService userService)
-            : base(userService)
+        public AccountController(IUserService userService, IStudentService studentService)
+            : base(userService, studentService)
         {
             this._userService = userService;
+            this._studentService = studentService;
         }
 
         [AllowAnonymous]

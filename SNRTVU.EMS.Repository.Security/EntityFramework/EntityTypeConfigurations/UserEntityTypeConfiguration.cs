@@ -10,7 +10,7 @@ using SNRTVU.EMS.Domain.Models;
 namespace SNRTVU.EMS.Repository.Security.EntityFramework.EntityTypeConfigurations
 {
     /// <summary>
-    /// 初始化 <c>UserEntityTypeConfiguration</c> 类的新实例。
+    /// 表示对 <c>User</c> 领域模型的实体类型配置。
     /// </summary>
     public class UserEntityTypeConfiguration : EntityTypeConfiguration<User>
     {
@@ -24,7 +24,7 @@ namespace SNRTVU.EMS.Repository.Security.EntityFramework.EntityTypeConfiguration
             base.Property(m => m.Account)
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(50);
-            base.Property(M => M.Password)
+            base.Property(m => m.Password)
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(100)
                 .IsRequired();

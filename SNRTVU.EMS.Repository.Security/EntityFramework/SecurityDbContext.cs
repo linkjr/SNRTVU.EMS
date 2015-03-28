@@ -24,6 +24,7 @@ namespace SNRTVU.EMS.Repository.Security.EntityFramework
         {
             modelBuilder.Configurations.Add(new UserEntityTypeConfiguration());
             modelBuilder.Configurations.Add(new AccountLogEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new StudentEntityTypeConfiguration());
 
             //modelBuilder.Configurations.Add(new NewsEntityTypeConfiguration());
 

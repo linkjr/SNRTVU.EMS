@@ -15,30 +15,33 @@
             <div class='navbar-default col-lg-2 col-md-3 col-sm-3 col-xs-5'>
                 <ul id="menu" class="nav nav-pills nav-stacked">
                     <li class="panel active">
-                        <a href="@Url.Action("index", "home")">
+                        <a href="javascript:;" data-toggle="collapse" data-parent="#menu" data-target="#home">
                             <span class="glyphicon glyphicon-home"></span>
                             <span>管理首页</span>
                         </a>
+                        <ul class="nav collapse in" id="home">
+                            <li><a href="@Url.Action("index", "home")">个人信息</a></li>
+                        </ul>
                     </li>
-                    <li class="panel">
-                        <a data-toggle="collapse" data-parent="#menu" data-target="#1" href="javascript:;">
+                    <li class="panel active">
+                        <a data-toggle="collapse" data-parent="#menu" data-target="#cog" href="javascript:;">
                             <span class="glyphicon glyphicon-cog"></span>
                             <span>个人中心</span>
                             <span class="caret"></span>
                         </a>
-                        <ul class="nav collapse in" id="1">
+                        <ul class="nav collapse in" id="cog">
                             <li><a href="@Url.Action("changepassword", "manage")">修改密码</a></li>
                             <li><a href="@Url.Action("modifyprofile", "manage")">修改资料</a></li>
                             <li><a href="@Url.Action("modifycontact", "manage")">联系方式</a></li>
                         </ul>
                     </li>
-                    <li class="panel">
-                        <a data-toggle="collapse" data-parent="#menu" data-target="#2" href="javascript:;">
+                    <li class="panel active">
+                        <a data-toggle="collapse" data-parent="#menu" data-target="#download" href="javascript:;">
                             <span class="glyphicon glyphicon-download-alt"></span>
                             <span>下载中心</span>
                             <span class="caret"></span>
                         </a>
-                        <ul class="nav collapse in" id="2">
+                        <ul class="nav collapse in" id="download">
                             <li><a href="@Url.Content(Config.ChromeDownload)">谷歌下载</a></li>
                             <li><a href="@Config.FirefoxDownload">火狐下载</a></li>
                         </ul>

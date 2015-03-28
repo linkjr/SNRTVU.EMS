@@ -15,13 +15,14 @@ namespace SNRTVU.EMS.Web.Security.Tests.Controllers
     [TestClass]
     public class HomeControllerTest
     {
-        private IUserService userService;
+        private readonly IUserService userService;
+        private readonly IStudentService studentService;
 
         [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController(userService);
+            HomeController controller = new HomeController(userService, studentService);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;

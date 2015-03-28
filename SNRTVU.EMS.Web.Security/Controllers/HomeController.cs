@@ -10,12 +10,14 @@ namespace SNRTVU.EMS.Web.Security.Controllers
 {
     public class HomeController : AdminController
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
+        private readonly IStudentService _studentService;
 
-        public HomeController(IUserService userService)
-            : base(userService)
+        public HomeController(IUserService userService, IStudentService studentService)
+            : base(userService, studentService)
         {
             this._userService = userService;
+            this._studentService = studentService;
         }
 
         public ActionResult Index()
